@@ -5,7 +5,7 @@
             Your Order
         </title>
       	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <script type="text/javascript" src="p_o.js"></script>
+        <script src="jquery.js"></script>
          <script src="jquery.cookie.js"></script>
         <script>
 function largeImg(x,pic) {
@@ -50,9 +50,9 @@ document.getElementById(x).src=pic;
                 <tr valign=top>
                     <td>
                     <b>Please Choose Pizza Size</b><br>
-                        <input type=radio name=pizzaSize value=8 checked>Small<br>
-                        <input type=radio name=pizzaSize value=10 >Medium<br>
-                        <input type=radio name=pizzaSize value=15 >Large<br>
+                        <input type=radio name=pizzaSize value=8 >Small<br>
+                        <input type=radio name=pizzaSize value=10>Medium<br>
+                        <input type=radio name=pizzaSize value=15>Large<br>
                         <input type=radio name=pizzaSize value=18> Extra Large<br>
                         
                     </td>
@@ -101,14 +101,14 @@ document.getElementById(x).src=pic;
 
                 </tr>
             </table>
-            <input type=button value="Price your order" onClick="buttonandchecks();">
-          <input type="submit" value="Submit">
+            <input type=button value="Price your order" id="button">
         </form>
         <br>
         <h2>Total Order: </h2><h2><span id="result"></span></h2>
         <br>    
         <h2><span id="result2"></span></h2>
         <br>
-        <h2 id="pageHits">&nbsp;</h2>
+        <h2 id="pageHits"></h2>
+        <h2 id="datefield"></h2>
     </body>
 </html>
