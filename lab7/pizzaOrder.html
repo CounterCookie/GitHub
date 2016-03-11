@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Your Order
+        </title>
+      	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="jquery.js"></script>
+         <script src="jquery.cookie.js"></script>
+        <script>
+function largeImg(x,pic) {
+
+	
+
+
+document.getElementById(x).src=pic;
+document.getElementById(x).style.width="300px";
+document.getElementById(x).style.height="auto";
+document.getElementById("Name").style.backgroundColor="Yellow";
+    
+    
+}
+
+function thumbImg(x,pic) {
+document.getElementById(x).src=pic; 
+}
+</script>
+        <style>
+            body {background-color: #2DA3B3}
+        </style>
+    </head>
+    <body>
+    
+    <h1>Today: <span id="dateField"></span></h1>
+        <br>
+        <br>
+      <form name="pizzaCost">
+            <table>
+                <tr>
+                    <td>Name:</td><td><input type="text" id="customername"  size="25" autofocus="yes" pattern="[A-z-]+" name="Name" required ></td>
+                </tr>
+                <tr>
+                    <td>Address:</td><td><input type="text" id="myaddress" size="25" pattern="[a-z0-9._%+- ]{0,30}$" name="address" required></td>
+                </tr>
+                <tr>
+                    <td>Phone:</td><td> <input type="tel" id="phone" size="25" placeholder="(###) ### ####" pattern="\d{3}\d{3}\d{4}" name="Phone" required></td>
+                </tr>
+            </table>
+            <table border="2">
+                <tr valign=top>
+                    <td>
+                    <b>Please Choose Pizza Size</b><br>
+                        <input type=radio name=pizzaSize value=8 >Small<br>
+                        <input type=radio name=pizzaSize value=10>Medium<br>
+                        <input type=radio name=pizzaSize value=15>Large<br>
+                        <input type=radio name=pizzaSize value=18> Extra Large<br>
+                        
+                    </td>
+                    
+                    <td>
+                   <b>Special Pizza's</b><br>
+                        <input type=radio name=special value=3 >Super Cheesy
+                        <br>
+                        <input type=radio name=special value=5>Extra Meaty
+                        <br>
+                        <input type=radio name=special value=2>Really Veggy<br>
+                    </td>
+                    <td>
+                        <b>Toppings</b><br>
+                        <input type=checkbox name=cheese>Extra Cheese<br>
+                        <input type=checkbox name=pepperoni>Pepperoni<br>
+                        <input type=checkbox name=mushroom>Mushrooms<br>
+                        <input type=checkbox name=bacon>Bacon<br>
+                        <input type=checkbox name=olive>Olives<br>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <table>
+                <tr>
+                    <td>
+                        <figure>
+                            <img src="pictures/supercheesy.jpg" onmouseout="thumbImg('pizzapic1', 'pictures/supercheesy.jpg')" onmouseover="thumbImg('pizzapic1','pictures/supercheesy1.jpg')" alt="superCheesy" id=pizzapic1>
+                            <figcaption>Super Cheesy</figcaption>
+                        </figure>
+                    </td>
+                    <td>
+                        <figure>
+                    
+                         <img src="pictures/supermeaty1.jpg" onmouseout="thumbImg('pizzapic2', 'pictures/supermeaty1.jpg')" onmouseover="thumbImg('pizzapic2','pictures/supermeaty.jpg')" alt="supermeaty" id=pizzapic2>
+                            <figcaption>Super Meaty</figcaption>
+                        </figure> 
+                    
+                    </td>
+                    <td>
+                        <figure>
+                        <img src="pictures/very%20veggy.jpg" onmouseout="thumbImg('pizzapic3', 'pictures/very%20veggy.jpg')" onmouseover="thumbImg('pizzapic3','pictures/veryveggy1.jpg')" alt="superveggy" id=pizzapic3>
+                            <figcaption>Really Veggy</figcaption>
+                        </figure>
+                    </td>
+
+                </tr>
+            </table>
+            <input type=button value="Price your order" id="button">
+        </form>
+        <br>
+        <h2>Total Order: </h2><h2><span id="result"></span></h2>
+        <br>    
+        <h2><span id="result2"></span></h2>
+        <br>
+        <h2 id="pageHits"></h2>
+        <h2 id="datefield"></h2>
+    </body>
+</html>
